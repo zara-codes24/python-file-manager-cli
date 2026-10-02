@@ -6,8 +6,8 @@ def readfileandfolder():
     path = Path('')
     items = list(path.rglob('*'))
 
-    for i, items in enumerate(items):
-        print(f"{i+1} : {items}")
+    for i, item in enumerate(items):
+        print(f"{i+1} : {item}")
 
 
 def createfile():
@@ -48,7 +48,7 @@ def updatefile():
         readfileandfolder()
         name = input("Which file you want to update?")
         p = Path(name)
-        if p.exists and p.is_file():
+        if p.exists() and p.is_file():
             print("Press 1 for changing the name of your file:-")
             print("Press 2 for overwriting the data of your file:-")
             print("Press 3 for appending some content in yout file:-")
